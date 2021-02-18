@@ -7,6 +7,11 @@
 
 * does
 	* produces graphs for paper chapter
+	* drops all variables unnecessary for the current analysis
+	* 
+
+* note
+	* we make no guarantee that variables no used in the analysis are cleaned or accurate
 	
 * assumes
 	* cleaned country data
