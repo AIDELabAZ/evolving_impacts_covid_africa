@@ -36,22 +36,17 @@ The approach to the phone survey questionnaire design and sampling is comparable
 
 ## Data cleaning
 
-The code in this repository cleans the raw phone surveys and replicates material (both in text and supplementary material) related to "Socioeconomic impact of COVID-19 in four African countries".  We make no guarantee that variables no used in the analysis are cleaned or accurate.
+The code in this repository cleans the raw phone surveys and replicates material related to "The evolving socioeconomic impact of
+Covid-19 in four African countries".  We make no guarantee that variables no used in the analysis are cleaned or accurate.
 
 ### Pre-requisites
 
 #### Stata reqs
 
 The data processing and analysis requires a number of user-written Stata programs:
-   * 1. `blindschemes`
-   * 2. `estout`
-   * 3. `mdesc`
-   * 4. `grc1leg2`
-   * 5. `distinct`
-   * 6. `winsor2`
-   * 7. `palettes`
-   * 8. `catplot`
-   * 9. `colrspace` 
+   * 1. `grc1leg2`
+   * 2. `palettes`
+   * 3. `catplot`
 
 #### Folder structure
 
@@ -71,7 +66,6 @@ wb_covid
 │────Analysis            /* overall analysis */
 │    ├──code
 │    └──output
-│       ├──tables
 │       └──figures
 │   
 └────config
