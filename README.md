@@ -23,7 +23,28 @@ As described in more detail below, scripts various go through each step, from cl
 
 ## Developing Environment
 
-Step 1: Set up file structure as outlined below: 
+### Step 1: Clone the repository https://github.com/afurbush/evolving_impacts_covid_africa 
+
+The general repo structure looks as follows:<br>
+
+```stata
+evolving_impacts_covid_africa
+├────README.md
+├────projectdo.do
+├────LICENSE
+│    
+├────country             /* one dir for each country */
+│    │  └──wave          /* one file for each wave */
+│    |  └──master
+│
+│────analysis            /* overall analysis */
+│    ├──pnl_cleaning
+│    └──evolving_impacts
+```
+
+Open the projectdo.do file and update the global filepath with your username in Section 0 (a).
+
+### Step 2: Set up file structure as outlined below: 
 ```stata
 C:/Users/USERNAME/evolving_impacts
 ├────output
@@ -60,7 +81,7 @@ C:/Users/USERNAME/evolving_impacts
 |    |        │  └──wave_03
 ```
 
-Step 2: Download data to corresponding folders
+### Step 3: Download data to corresponding folders
 
 Download microdata Stata files from the following links. You will need to create an account with the World Bank if you do not already have one and will be asked to provide a reason for downloading the data. Once data are downloaded, save the data files to the corresponding folders created in Step 1. 
  - Ethiopia Waves 1-5: http://bit.ly/ethiopia-phonesurvey 
@@ -68,6 +89,7 @@ Download microdata Stata files from the following links. You will need to create
  - Nigeria Waves 1-5: http://bit.ly/nigeria-phonesurvey
  - Uganda Waves 1-3: http://bit.ly/uganda-phonesurvey 
 
+### Step 4: Run the projectdo.do file. Output graphs will be saved to the `output` folder. 
 
 ## Data 
 
@@ -96,21 +118,3 @@ The data processing and analysis requires a number of user-written Stata program
    * 2. `palettes`
    * 3. `catplot`
 
-#### Folder structure
-
-The general repo structure looks as follows:<br>
-
-```stata
-evolving_impacts_covid_africa
-├────README.md
-├────projectdo.do
-├────LICENSE
-│    
-├────country             /* one dir for each country */
-│    │  └──wave          /* one file for each wave */
-│    |  └──master
-│
-│────analysis            /* overall analysis */
-│    ├──pnl_cleaning
-│    └──evolving_impacts
-```
