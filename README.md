@@ -53,7 +53,7 @@ The data processing and analysis requires a number of user-written Stata program
 The general repo structure looks as follows:<br>
 
 ```stata
-wb_covid
+evolving_impacts_covid_africa
 ├────README.md
 ├────projectdo.do
 ├────LICENSE
