@@ -21,6 +21,54 @@ Contributors:
 
 As described in more detail below, scripts various go through each step, from cleaning raw data to analysis.
 
+## Developing Environment
+
+Step 1: Set up file structure as outlined below: 
+```stata
+C:/Users/USERNAME/evolving_impacts
+├────output
+├────data
+|    └──analysis
+|    └──ethiopia
+|    │    │  └──refined
+|    │    │  └──raw
+|    |        │  └──wave_01
+|    |        │  └──wave_02
+|    |        │  └──wave_03
+|    |        │  └──wave_04
+|    |        │  └──wave_05
+|    └──malawi
+|    │    │  └──refined
+|    │    │  └──raw
+|    |        │  └──wave_01
+|    |        │  └──wave_02
+|    |        │  └──wave_03
+|    |        │  └──wave_04
+|    └──nigeria
+|    │    │  └──refined
+|    │    │  └──raw
+|    |        │  └──wave_01
+|    |        │  └──wave_02
+|    |        │  └──wave_03
+|    |        │  └──wave_04
+|    |        │  └──wave_05
+|    └──uganda
+|    │    │  └──refined
+|    │    │  └──raw
+|    |        │  └──wave_01
+|    |        │  └──wave_02
+|    |        │  └──wave_03
+```
+
+Step 2: Download data to corresponding folders
+
+Download microdata Stata files from the following links. You will need to create an account with the World Bank if you do not already have one and will be asked to provide a reason for downloading the data. Once data are downloaded, save the data files to the corresponding folders created in Step 1. 
+ - Ethiopia Waves 1-5: http://bit.ly/ethiopia-phonesurvey 
+ - Malawi Waves 1-4: http://bit.ly/malawi-phonesurvey 
+ - Nigeria Waves 1-5: http://bit.ly/nigeria-phonesurvey
+ - Uganda Waves 1-3: http://bit.ly/uganda-phonesurvey 
+
+
 ## Data 
 
 The publicly-available data for each survey round is coupled with a basic information document, interview manual, and questionnaire for that round, which can be accessed through: 
