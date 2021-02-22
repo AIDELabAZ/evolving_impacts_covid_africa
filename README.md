@@ -59,14 +59,10 @@ evolving_impacts_covid_africa
 ├────LICENSE
 │    
 ├────country             /* one dir for each country */
-│    ├──household_data
-│    │  └──wave          /* one dir for each wave */
-│    ├──household_cleaning_code 
+│    │  └──wave          /* one file for each wave */
+│    |  └──master
 │
-│────Analysis            /* overall analysis */
-│    ├──code
-│    └──output
-│       └──figures
-│   
-└────config
+│────analysis            /* overall analysis */
+│    ├──pnl_cleaning
+│    └──evolving_impacts
 ```
