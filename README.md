@@ -78,20 +78,20 @@ C:/Users/USERNAME/evolving_impacts
 └────data
      ├──analysis
      ├──ethiopia
-     |  ├──refined
-     |  └──raw
-     |     ├──wave_01
-     |     ├──wave_02
-     |     ├──wave_03
-     |     ├──wave_04
-     |     └──wave_05
+     │    ├──refined
+     │    └──raw
+     │         ├──wave_01
+     │         ├──wave_02
+     │         ├──wave_03
+     │         ├──wave_04
+     │         └──wave_05
      ├──malawi
-     |  ├──refined
-     │  └──raw
-     |     ├──wave_01
-     |     ├──wave_02
-     |     ├──wave_03
-     |     └──wave_04
+     |    ├──refined
+     │    └──raw
+     │         ├──wave_01
+     │         ├──wave_02
+     │         ├──wave_03
+     │         └──wave_04
      ├──nigeria
      |  ├──refined
      |  └──raw
