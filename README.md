@@ -36,43 +36,85 @@ The approach to the phone survey questionnaire design and sampling is comparable
 
 ## Data cleaning
 
-The code in this repository cleans the raw phone surveys and replicates material (both in text and supplementary material) related to "Socioeconomic impact of COVID-19 in four African countries".  We make no guarantee that variables no used in the analysis are cleaned or accurate.
+The code in this repository cleans the raw phone surveys and replicates material related to "The evolving socioeconomic impact of
+Covid-19 in four African countries".  We make no guarantee that variables no used in the analysis are cleaned or accurate.
 
 ### Pre-requisites
 
 #### Stata reqs
 
 The data processing and analysis requires a number of user-written Stata programs:
-   * 1. `blindschemes`
-   * 2. `estout`
-   * 3. `mdesc`
-   * 4. `grc1leg2`
-   * 5. `distinct`
-   * 6. `winsor2`
-   * 7. `palettes`
-   * 8. `catplot`
-   * 9. `colrspace` 
+   * 1. `grc1leg2`
+   * 2. `palettes`
+   * 3. `catplot`
 
-#### Folder structure
+
+## Developing Environment
+
+### Step 1: Clone the repository https://github.com/afurbush/evolving_impacts_covid_africa 
 
 The general repo structure looks as follows:<br>
 
 ```stata
-wb_covid
+evolving_impacts_covid_africa
 ├────README.md
 ├────projectdo.do
 ├────LICENSE
 │    
 ├────country             /* one dir for each country */
-│    ├──household_data
-│    │  └──wave          /* one dir for each wave */
-│    ├──household_cleaning_code 
+│    │  └──wave          /* one file for each wave */
+│    |  └──master
 │
-│────Analysis            /* overall analysis */
-│    ├──code
-│    └──output
-│       ├──tables
-│       └──figures
-│   
-└────config
+│────analysis            /* overall analysis */
+│    ├──pnl_cleaning
+│    └──evolving_impacts
 ```
+
+### Step 2: Open the projectdo.do file and update the global filepath with your username in Section 0 (a).
+
+### Step 3: Set up file structure as outlined below: 
+```stata
+C:/Users/USERNAME/evolving_impacts
+├────output
+├────data
+|    └──analysis
+|    └──ethiopia
+|    │    │  └──refined
+|    │    │  └──raw
+|    |        │  └──wave_01
+|    |        │  └──wave_02
+|    |        │  └──wave_03
+|    |        │  └──wave_04
+|    |        │  └──wave_05
+|    └──malawi
+|    │    │  └──refined
+|    │    │  └──raw
+|    |        │  └──wave_01
+|    |        │  └──wave_02
+|    |        │  └──wave_03
+|    |        │  └──wave_04
+|    └──nigeria
+|    │    │  └──refined
+|    │    │  └──raw
+|    |        │  └──wave_01
+|    |        │  └──wave_02
+|    |        │  └──wave_03
+|    |        │  └──wave_04
+|    |        │  └──wave_05
+|    └──uganda
+|    │    │  └──refined
+|    │    │  └──raw
+|    |        │  └──wave_01
+|    |        │  └──wave_02
+|    |        │  └──wave_03
+```
+
+### Step 4: Download data to corresponding folders
+
+Download microdata Stata files from the following links. You will need to create an account with the World Bank if you do not already have one and will be asked to provide a reason for downloading the data. Once data are downloaded, save the data files to the corresponding folders created in Step 1. 
+ - Ethiopia Waves 1-5: http://bit.ly/ethiopia-phonesurvey 
+ - Malawi Waves 1-4: http://bit.ly/malawi-phonesurvey 
+ - Nigeria Waves 1-5: http://bit.ly/nigeria-phonesurvey
+ - Uganda Waves 1-3: http://bit.ly/uganda-phonesurvey 
+
+### Step 5: Run the projectdo.do file. Output graphs will be saved to the `output` folder. 
