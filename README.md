@@ -54,11 +54,9 @@ evolving_impacts_covid_africa
 ├────README.md
 ├────projectdo.do
 ├────LICENSE
-│    
 ├────country             /* one dir for each country */
 │    ├──wave             /* one file for each wave */
 │    └──master
-│
 └────analysis            /* overall analysis */
      ├──pnl_cleaning
      └──evolving_impacts
@@ -70,7 +68,7 @@ Open the projectdo.do file and update the global filepath with your username in 
 
 ### Step 3
 
-Set up file structure on your local machine as outlined below: 
+Set up the file structure on your local machine as outlined below: 
 
 ```stata
 C:/Users/USERNAME/evolving_impacts
@@ -110,10 +108,12 @@ C:/Users/USERNAME/evolving_impacts
 
 ### Step 4
 
-Download microdata Stata files from the following links. You will need to create an account with the World Bank if you do not already have one and will be asked to provide a reason for downloading the data. Once data are downloaded, save the data files to the corresponding folders created in Step 1. 
+Download microdata Stata files from the following links. You will need to create an account with the World Bank if you do not already have one and will be asked to provide a reason for downloading the data. Once data are downloaded, save the data files to the corresponding folders created in Step 3. 
  - Ethiopia Waves 1-5: http://bit.ly/ethiopia-phonesurvey 
  - Malawi Waves 1-4: http://bit.ly/malawi-phonesurvey 
  - Nigeria Waves 1-5: http://bit.ly/nigeria-phonesurvey
  - Uganda Waves 1-3: http://bit.ly/uganda-phonesurvey 
 
-### Step 5: Run the projectdo.do file. Output graphs will be saved to the `output` folder. 
+### Step 5
+
+Run the `projectdo.do` file. Output graphs will be saved to the `output` folder. 
