@@ -40,13 +40,14 @@ The data processing and analysis requires a number of user-written Stata program
    * 1. `grc1leg2`
    * 2. `palettes`
    * 3. `catplot`
+
 The `projectdo.do` file will help you install these.
 
 ## Developing Environment
 
-### Step 1: Clone the repository https://github.com/afurbush/evolving_impacts_covid_africa 
+### Step 1
 
-The general repo structure looks as follows:<br>
+Clone this  repository https://github.com/afurbush/evolving_impacts_covid_africa. The general repo structure looks as follows:<br>
 
 ```stata
 evolving_impacts_covid_africa
@@ -55,8 +56,8 @@ evolving_impacts_covid_africa
 ├────LICENSE
 │    
 ├────country             /* one dir for each country */
-│    │  └──wave          /* one file for each wave */
-│    |  └──master
+│    ├──wave             /* one file for each wave */
+│    └──master
 │
 │────analysis            /* overall analysis */
 │    ├──pnl_cleaning
