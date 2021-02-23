@@ -86,26 +86,26 @@ C:/Users/USERNAME/evolving_impacts
      │         ├──wave_04
      │         └──wave_05
      ├──malawi
-     |    ├──refined
+     │    ├──refined
      │    └──raw
      │         ├──wave_01
      │         ├──wave_02
      │         ├──wave_03
      │         └──wave_04
      ├──nigeria
-     |  ├──refined
-     |  └──raw
-     |     ├──wave_01
-     |     ├──wave_02
-     |     ├──wave_03
-     |     ├──wave_04
-     |     └──wave_05
+     │    ├──refined
+     │    └──raw
+     │         ├──wave_01
+     │         ├──wave_02
+     │         ├──wave_03
+     │         ├──wave_04
+     │         └──wave_05
      └──uganda
-        ├──refined
-        └──raw
-           ├──wave_01
-           ├──wave_02
-           └──wave_03
+          ├──refined
+          └──raw
+               ├──wave_01
+               ├──wave_02
+               └──wave_03
 ```
 
 ### Step 4
