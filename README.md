@@ -1,19 +1,17 @@
 # The Evolving Socioeconomic Impact of COVID-19 in Four African Countries: Replication Code
-This README describes the directory structure & should enable users to replicate all tables and figures for work related to the World Bank LSMS and World Bank COVID phone surveys. For more information and to access these phone surveys, visit the World Bank Microdata Library. The relevant surveys are available under under the High-Frequency Phone Survey collection: http://bit.ly/microdata-hfps.   
+This README describes the directory structure & Stata packages necessary to replicate all analysis for the book chapter "The evolving socioeconomic impact of COVID-19 in four African countries." The work relies on the World Bank LSMS and World Bank COVID phone surveys. For more information and to access these phone surveys, visit the World Bank Microdata Library. The relevant surveys are available under under the High-Frequency Phone Survey collection: http://bit.ly/microdata-hfps.   
 
 [![DOI](https://zenodo.org/badge/340188218.svg)](https://zenodo.org/badge/latestdoi/340188218)
 
  ## Index
 
- - [Introduction](#introduction)
+ - [Contributors](#contributors)
  - [Data](#data)
  - [Data cleaning](#data-cleaning)
  - [Pre-requisites](#pre-requisites)
  - [Folder structure](#folder-structure)
 
-## Introduction
-
-Contributors:
+## Contributors
 * Ann Furbush
 * Anna Josephson 
 * Talip Kilic 
