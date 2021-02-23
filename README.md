@@ -9,8 +9,7 @@ This README describes the directory structure & Stata packages necessary to repl
  - [Contributors](#contributors)
  - [Data](#data)
  - [Data cleaning](#data-cleaning)
- - [Pre-requisites](#pre-requisites)
- - [Folder structure](#folder-structure)
+ - [Developing Environment](#developing-environment)
 
 ## Contributors
 
