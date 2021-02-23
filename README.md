@@ -1,4 +1,4 @@
-# The Evolving Socioeconomic Impact of COVID-19 in Four African Countries: Replication Code
+# The Evolving Socioeconomic Impacts of COVID-19 in Four African Countries: Replication Code
 
 This README describes the directory structure & Stata packages necessary to replicate all analysis for the book chapter "The evolving socioeconomic impact of COVID-19 in four African countries." The work relies on the World Bank LSMS and World Bank COVID phone surveys. For more information and to access these phone surveys, visit the World Bank Microdata Library. The relevant surveys are available under under the High-Frequency Phone Survey collection: http://bit.ly/microdata-hfps. We make no guarantee that variables no used in the analysis are cleaned or accurate.
 
