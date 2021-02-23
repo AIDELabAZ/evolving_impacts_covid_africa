@@ -30,21 +30,13 @@
 * **********************************************************************
 
 * Define root folder globals
-	if `"`c(username)'"' == "annfu" {
-		global 		code  	"C:/Users/annfu/git/evolving_impacts_covid_africa"
-		global 		data	"G:/My Drive/wb_covid/data"
-		global 		output  "G:/My Drive/wb_covid/output"
-		global		ans		"$data/analysis"
-	}
-	
-/* 
-* Define root folder globals
 	if `"`c(username)'"' == "USERNAME" {
 		global 		code  	"C:/Users/USERNAME/git/evolving_impacts_covid_africa"
 		global 		data	"C:/Users/USERNAME/evolving_impacts/data"
 		global 		output  "C:/Users/USERNAME/evolving_impacts/output"
+		global		ans		"$data/analysis"
 	}
-*/
+
 	
 * **********************************************************************
 * 0 (b) - Check if any required packages are installed:

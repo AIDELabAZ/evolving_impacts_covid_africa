@@ -24,12 +24,7 @@
 * define 
 	global	root	=	"$data/nigeria/raw"
 	global	export	=	"$data/nigeria/refined"
-	global	logout	=	"$data/nigeria/logs"
 	global  fies 	= 	"$data/analysis/raw/Nigeria"
-
-* open log
-	cap log 		close
-	log using		"$logout/nga_reshape", append
 
 * set local wave number & file number
 	local			w = 2
@@ -211,9 +206,6 @@
 	rename 			s6q23 ag_live
 * save round file
 	save			"$export/wave_0`w'/r`w'", replace
-
-* close the log
-	log	close
 	
 	
 /* END */		

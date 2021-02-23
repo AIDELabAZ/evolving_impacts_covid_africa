@@ -32,28 +32,7 @@
 * define
 	global	root	=	"$data/malawi/raw"
 	global	export	=	"$data/malawi/refined"
-	global	logout	=	"$data/malawi/logs"
 	global  fies 	= 	"$data/analysis/raw/Malawi"
-
-* Define root folder globals
-    if `"`c(username)'"' == "jdmichler" {
-        global 		code  	"C:/Users/jdmichler/git/wb_covid"
-		global 		data	"G:/My Drive/wb_covid/data"
-    }
-
-    if `"`c(username)'"' == "aljosephson" {
-        global 		code  	"C:/Users/aljosephson/git/wb_covid"
-		global 		data	"G:/My Drive/wb_covid/data"
-    }
-
-	if `"`c(username)'"' == "annfu" {
-		global 		code  	"C:/Users/annfu/git/wb_covid"
-		global 		data	"G:/My Drive/wb_covid/data"
-	}
-	
-* open log
-	cap log 		close
-	log using		"$logout/mal_build", append
 	
 
 * ***********************************************************************
@@ -1031,7 +1010,5 @@
 		customsave , idvar(hhid_mwi) filename("mwi_panel.dta") ///
 			path("$export") dofile(mwi_build) user($user)
 
-* close the log
-	log	close
 
 /* END */

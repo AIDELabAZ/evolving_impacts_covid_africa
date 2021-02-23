@@ -24,13 +24,8 @@
 * define
 	global	root	=	"$data/malawi/raw"
 	global	export	=	"$data/malawi/refined"
-	global	logout	=	"$data/malawi/logs"
 	global  fies 	= 	"$data/analysis/raw/Malawi"
 
-* open log
-	cap log 		close
-	log using		"$logout/mal_build", append
-	
 * set local wave number & file number
 	local			w = 1
 	
@@ -239,4 +234,5 @@
 * save round file
 	save			"$export/wave_0`w'/r`w'", replace
 
+	
 /* END */		

@@ -25,12 +25,7 @@
 * define 
 	global	root	=	"$data/ethiopia/raw"
 	global	export	=	"$data/ethiopia/refined"
-	global	logout	=	"$data/ethiopia/logs"
 	global  fies 	= 	"$data/analysis/raw/Ethiopia"
-
-* open log
-	cap log 		close
-	log using		"$logout/eth_build", append
 
 * set local wave number
 	local			w = 3	

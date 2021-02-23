@@ -25,11 +25,6 @@
 	global	root	=	"$data/uganda/raw"
 	global	fies	=	"$data/analysis/raw/Uganda"
 	global	export	=	"$data/uganda/refined"
-	global	logout	=	"$data/uganda/logs"
-
-* open log
-	cap log 		close
-	log using		"$logout/uga_build", append
 	
 * set local wave number & file number
 	local			w = 2

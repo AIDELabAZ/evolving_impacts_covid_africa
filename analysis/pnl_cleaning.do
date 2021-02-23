@@ -20,22 +20,12 @@
 * **********************************************************************
 * 0 - setup
 * **********************************************************************
-pause on
-di "$code"
-pause
+
 * run do files for each country (takes a little while to run)
 	run				"$code/ethiopia/eth_build_master"
-di "$code"
-pause
 	run 			"$code/malawi/mwi_build_master"
-di "$code"
-pause
 	run				"$code/nigeria/nga_build_master"
-di "$code"
-pause
 	run 			"$code/uganda/uga_build_master"
-di "$code"
-pause
 	
 * define
 	global	eth		=	"$data/ethiopia/refined" 
