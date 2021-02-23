@@ -36,13 +36,11 @@ The approach to the phone survey questionnaire design and sampling is comparable
 
 ### Pre-requisites
 
-#### Stata reqs
-
 The data processing and analysis requires a number of user-written Stata programs:
    * 1. `grc1leg2`
    * 2. `palettes`
    * 3. `catplot`
-
+The `projectdo.do` file will help you install these.
 
 ## Developing Environment
 
