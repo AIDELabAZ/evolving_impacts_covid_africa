@@ -69,7 +69,7 @@ Open the projectdo.do file and update the global filepath with your username in 
    ```
     if `"`c(username)'"' == "USERNAME" {
         global 		code  	"C:/Users/USERNAME/git/evolving_impacts_covid_africa"
-	global 		data	"C:/Users/USERNAME/data"
+        global 		data	"C:/Users/USERNAME/data"
     }
    ```
 
