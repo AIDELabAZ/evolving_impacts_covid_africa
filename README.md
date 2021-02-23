@@ -59,7 +59,7 @@ evolving_impacts_covid_africa
 │    ├──wave             /* one file for each wave */
 │    └──master
 │
-│────analysis            /* overall analysis */
+└────analysis            /* overall analysis */
      ├──pnl_cleaning
      └──evolving_impacts
 ```
@@ -77,7 +77,7 @@ C:/Users/USERNAME/evolving_impacts
 ├────output
 └────data
      ├──analysis
-     └──ethiopia
+     ├──ethiopia
      |  ├──refined
      |  └──raw
      |     ├──wave_01
@@ -92,7 +92,7 @@ C:/Users/USERNAME/evolving_impacts
      |     ├──wave_02
      |     ├──wave_03
      |     └──wave_04
-     └──nigeria
+     ├──nigeria
      |  ├──refined
      |  └──raw
      |     ├──wave_01
