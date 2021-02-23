@@ -60,50 +60,55 @@ evolving_impacts_covid_africa
 │    └──master
 │
 │────analysis            /* overall analysis */
-│    ├──pnl_cleaning
-│    └──evolving_impacts
+     ├──pnl_cleaning
+     └──evolving_impacts
 ```
 
-### Step 2: Open the projectdo.do file and update the global filepath with your username in Section 0 (a).
+### Step 2
 
-### Step 3: Set up file structure as outlined below: 
+Open the projectdo.do file and update the global filepath with your username in Section 0 (a).
+
+### Step 3
+
+Set up file structure on your local machine as outlined below: 
+
 ```stata
 C:/Users/USERNAME/evolving_impacts
 ├────output
-├────data
-|    └──analysis
-|    └──ethiopia
-|    │    │  └──refined
-|    │    │  └──raw
-|    |        │  └──wave_01
-|    |        │  └──wave_02
-|    |        │  └──wave_03
-|    |        │  └──wave_04
-|    |        │  └──wave_05
-|    └──malawi
-|    │    │  └──refined
-|    │    │  └──raw
-|    |        │  └──wave_01
-|    |        │  └──wave_02
-|    |        │  └──wave_03
-|    |        │  └──wave_04
-|    └──nigeria
-|    │    │  └──refined
-|    │    │  └──raw
-|    |        │  └──wave_01
-|    |        │  └──wave_02
-|    |        │  └──wave_03
-|    |        │  └──wave_04
-|    |        │  └──wave_05
-|    └──uganda
-|    │    │  └──refined
-|    │    │  └──raw
-|    |        │  └──wave_01
-|    |        │  └──wave_02
-|    |        │  └──wave_03
+└────data
+     ├──analysis
+     └──ethiopia
+     |  ├──refined
+     |  └──raw
+     |     ├──wave_01
+     |     ├──wave_02
+     |     ├──wave_03
+     |     ├──wave_04
+     |     └──wave_05
+     ├──malawi
+     |  ├──refined
+     │  └──raw
+     |     ├──wave_01
+     |     ├──wave_02
+     |     ├──wave_03
+     |     └──wave_04
+     └──nigeria
+     |  ├──refined
+     |  └──raw
+     |     ├──wave_01
+     |     ├──wave_02
+     |     ├──wave_03
+     |     ├──wave_04
+     |     └──wave_05
+     └──uganda
+        ├──refined
+        └──raw
+           ├──wave_01
+           ├──wave_02
+           └──wave_03
 ```
 
-### Step 4: Download data to corresponding folders
+### Step 4
 
 Download microdata Stata files from the following links. You will need to create an account with the World Bank if you do not already have one and will be asked to provide a reason for downloading the data. Once data are downloaded, save the data files to the corresponding folders created in Step 1. 
  - Ethiopia Waves 1-5: http://bit.ly/ethiopia-phonesurvey 
