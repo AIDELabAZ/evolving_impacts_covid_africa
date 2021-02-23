@@ -67,11 +67,9 @@ evolving_impacts_covid_africa
 Open the projectdo.do file and update the global filepath with your username in Section 0 (a).
 
    ```
-       if `"`c(username)'"' == "USERNAME" {	
-              global 		project  	"C:/Users/USERNAME/git/lsms-isa_data_handbook"	
-		
-		* tell Stata where to find the relevant programs
-		whereis pandoc 			"C:/Users/USERNAME/AppData/Local/Pandoc/pandoc.exe"
+    if `"`c(username)'"' == "USERNAME" {
+        global 		code  	"C:/Users/USERNAME/git/evolving_impacts_covid_africa"
+	global 		data	"C:/Users/USERNAME/data"
     }
    ```
 
