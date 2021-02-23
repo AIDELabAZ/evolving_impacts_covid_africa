@@ -7,15 +7,11 @@
 	* establishes an identical workspace between users
 	* sets globals that define absolute paths
 	* serves as the starting point to find any do-file, dataset or output
-	* runs all do-files needed for data work. ([!] Eventually)
 	* loads any user written packages needed for analysis
 
 * assumes
 	* access to all data and code
-
-* TO DO:
-	* add all do-files
-
+	
 
 * **********************************************************************
 * 0 - setup
@@ -25,34 +21,30 @@
 	global 			pack 	0
 		
 * Specify Stata version in use
-    global stataVersion 16.1    // set Stata version
-    version $stataVersion
+    global 			stataVersion 16.1    // set Stata version
+    version 		$stataVersion
 
 	
 * **********************************************************************
 * 0 (a) - Create user specific paths
 * **********************************************************************
 
-
 * Define root folder globals
-    if `"`c(username)'"' == "jdmichler" {
-        global 		code  	"C:/Users/jdmichler/git/wb_covid"
-		global 		data	"G:/My Drive/wb_covid/data"
-		global 		output_f "G:/My Drive/wb_covid/output"
-    }
-
-    if `"`c(username)'"' == "aljosephson" {
-        global 		code  	"C:/Users/aljosephson/git/wb_covid"
-		global 		data	"G:/My Drive/wb_covid/data"
-		global 		output_f "G:/My Drive/wb_covid/output"
-    }
-
 	if `"`c(username)'"' == "annfu" {
-		global 		code  	"C:/Users/annfu/git/wb_covid"
+		global 		code  	"C:/Users/annfu/git/evolving_impacts_covid_africa"
 		global 		data	"G:/My Drive/wb_covid/data"
-		global 		output_f "G:/My Drive/wb_covid/output"
+		global 		output  "G:/My Drive/wb_covid/output"
+		global		ans		"$data/analysis"
 	}
 	
+/* 
+* Define root folder globals
+	if `"`c(username)'"' == "USERNAME" {
+		global 		code  	"C:/Users/USERNAME/git/evolving_impacts_covid_africa"
+		global 		data	"C:/Users/USERNAME/evolving_impacts/data"
+		global 		output  "C:/Users/USERNAME/evolving_impacts/output"
+	}
+*/
 	
 * **********************************************************************
 * 0 (b) - Check if any required packages are installed:
@@ -62,7 +54,7 @@
 if $pack == 1 {
 	
 	* for packages/commands, make a local containing any required packages
-		loc userpack "blindschemes mdesc estout distinct winsor2 palettes catplot grc1leg2 colrspace" 
+		loc userpack "catplot grc1leg2 palettes"
 	
 	* install packages that are on ssc	
 		foreach package in `userpack' {
@@ -81,9 +73,6 @@ if $pack == 1 {
 			}
 		}
 
-	* install -xfill- package
-		net install xfill, replace from(https://www.sealedenvelope.com/)
-
 	* update all ado files
 		ado update, update
 
@@ -97,13 +86,14 @@ if $pack == 1 {
 * 1 - run household data cleaning .do file
 * **********************************************************************
 
-	do 			"$code/analysis/pnl_cleaning.do" 	//runs all cleaning files 
+	do 			"$code/analysis/pnl_cleaning.do"  
 	
 	
 * **********************************************************************
-* 2 - run analysis .do files
+* 2 - run analysis .do file
 * **********************************************************************
 
+	do 			"$code/analysis/evolving_impact.do" 
 
-
+	
 /* END */

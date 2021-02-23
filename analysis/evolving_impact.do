@@ -6,9 +6,8 @@
 * Stata v.16.1
 
 * does
-	* produces graphs for paper chapter
-	* drops all variables unnecessary for the current analysis
-	* 
+		* drops all variables unnecessary for the current analysis
+		* produces graphs and statistical tests for book chapter
 
 * note
 	* we make no guarantee that variables no used in the analysis are cleaned or accurate
@@ -18,24 +17,11 @@
 	* catplot
 	* grc1leg2
 	* palettes
-	* colrspace
-
-* TO DO:
-	* done
 
 
 * **********************************************************************
 * 0 - setup
 * **********************************************************************
-
-* define
-	global	ans		=	"$data/analysis"
-	global	output	=	"$output_f/book_chapter/figures"
-	global	logout	=	"$data/analysis/logs"
-
-* open log
-	cap log 		close
-	log using		"$logout/presentation_graphs", append
 
 * read in data
 	use				"$ans/lsms_panel", clear
@@ -44,6 +30,15 @@
 	keep 				if ((country == 1 | country == 3 ) & wave < 6) | ///
 							(country == 2 & wave < 5) | (country == 4 & wave < 4)
 							
+* keep variables used in analysis
+	keep 				wave country hhid hhw phw wt_18 bh_3 bh_1 bh_2 bh_8 myth_2 myth_3 ///
+						myth_4 myth_5 farm_dwn bus_dwn wage_dwn remit_dwn other_dwn ///
+						bus_emp_inc p_mod p_sev concern_1 concern_2 cope_11 cope_9 ///
+						cope_10 cope_3 cope_1 cope_none asst_cash asst_food asst_kind ///
+						asst_any ac_medserv ac_staple ac_teff ac_oil ac_wheat ac_maize ///
+						ac_yam ac_rice ac_beans ac_cass  ac_sorg ac_teff_why ac_yam_why ///
+						edu_act edu_4 edu_2 edu_3 edu_5 edu_8 edu_11 
+								
 * waves to month number	
 	gen 				wave_orig = wave
 	replace 			wave = 9 if wave == 5 & (country == 3 | country == 1)
@@ -66,7 +61,16 @@
 	lab var 			wave_orig "Original wave number"
 	lab var 			wave "Month"
 
+* variable summary
+	preserve 
+		drop hhid wt* hhw phw 
+		ds 
+		foreach var in `r(varlist)' {
+			tab `var' country
+		}
+	restore
 	
+
 * **********************************************************************
 * 1 - behavior
 * **********************************************************************
@@ -862,12 +866,5 @@
 	graph export 		"$output/edu_how.png", as(png) replace
 	graph export 		"$output/edu_how.emf", as(emf) replace
 
-
-* **********************************************************************
-* 11 - end matter, clean up to save
-* **********************************************************************
-
-* close the log
-	log	close
 
 /* END */

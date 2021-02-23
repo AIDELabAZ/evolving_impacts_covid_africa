@@ -9,42 +9,33 @@
 	* merges together all countries
 	* renames variables
 	* output cleaned panel data
+	
+* note 
+	* we make no guarantee that variables no used in the analysis are cleaned or accurate
 
 * assumes
 	* cleaned country data
 
-* TO DO:
-	* automate line ~432 income and waves in nga so do not have to update manually
-	* finish cleaning credit variables
-	* add more notes and annotation
-	* search "NOTE" and review
-	
-	
+
 * **********************************************************************
 * 0 - setup
 * **********************************************************************
-
-* Define root folder globals
-    if `"`c(username)'"' == "jdmichler" {
-        global 		code  	"C:/Users/jdmichler/git/wb_covid"
-		global 		data	"G:/My Drive/wb_covid/data"
-    }
-
-    if `"`c(username)'"' == "aljosephson" {
-        global 		code  	"C:/Users/aljosephson/git/wb_covid"
-		global 		data	"G:/My Drive/wb_covid/data"
-    }
-
-	if `"`c(username)'"' == "annfu" {
-		global 		code  	"C:/Users/annfu/git/wb_covid"
-		global 		data	"G:/My Drive/wb_covid/data"
-	}	
-	
+pause on
+di "$code"
+pause
 * run do files for each country (takes a little while to run)
 	run				"$code/ethiopia/eth_build_master"
+di "$code"
+pause
 	run 			"$code/malawi/mwi_build_master"
+di "$code"
+pause
 	run				"$code/nigeria/nga_build_master"
+di "$code"
+pause
 	run 			"$code/uganda/uga_build_master"
+di "$code"
+pause
 	
 * define
 	global	eth		=	"$data/ethiopia/refined" 
@@ -52,11 +43,6 @@
 	global	nga		=	"$data/nigeria/refined" 
 	global	uga		=	"$data/uganda/refined"
 	global	export	=	"$data/analysis"
-	global	logout	=	"$data/analysis/logs"
-
-* open log
-	cap log 			close
-	log using			"$logout/analysis", append
 	
 
 * **********************************************************************
@@ -627,7 +613,6 @@
 	gen 				remit_inc = 0
 	replace 			remit_inc = 1 if rem_dom == 1 | rem_for == 1
 	lab val 			remit_inc yesno
-	* others fine as is: bus_inc farm_inc wage_inc 	
 	
 	* business income 
 	replace 			bus_emp_inc = . if bus_emp_inc < 0
@@ -760,58 +745,6 @@
 	
 * save file 	
 	save				"$export/lsms_panel", replace
-
-* close the log
-	log	close	
-	
-
-* *********************************************************************
-* 9 - generate variable-country-wave crosswalk
-* **********************************************************************	
-	preserve
-	drop 				country wave 
-	ds
-	restore
-	foreach 			var in `r(varlist)' {
-		preserve
-		keep 			country wave `var'
-		collapse 		(sum) `var', by(country wave)
-		replace 		`var' = 1 if `var' != 0
-		gen 			country_s = cond(country == 1, "eth", cond(country == 2, ///
-						"mwi", cond(country == 3, "nga", "uga")))
-		drop 			country
-		reshape 		wide `var', i(country) j(wave)
-		gen 			variable = _n
-		reshape 		wide `var'*, i(variable) j(country_s) string
-		levelsof 		variable, local(t)
-		* drop if variable contains all missing values
-		foreach 			v of varlist _all {
-			 capture 		assert mi(`v')
-			 if 			!_rc {
-				drop 		`v'
-			 }
-		 }
-		tostring 		variable, replace
-		replace 		variable = "`var'"
-		collapse 		(sum) `var'*, by(variable)
-		foreach 		c in eth mwi nga uga {
-			rename 		`var'*`c' `c'*
-		}
-		tempfile 		temp`var'
-		save 			`temp`var''
-		restore
-	}
-	preserve
-	drop 				country wave urban
-	ds
-	clear
-	foreach 			var in `r(varlist)' {
-		append 			using `temp`var''
-	}
-
-	export 				excel "$export/variable_country_wave_crosswalk.xlsx", ///
-							sheetreplace sheet(Vars_waves) first(var)
-	restore	
 	
 	
 /* END */
