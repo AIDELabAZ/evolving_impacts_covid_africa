@@ -2,7 +2,7 @@
 
 This README describes the directory structure & Stata packages necessary to replicate all analysis for the book chapter "The evolving socioeconomic impacts of COVID-19 in four African countries" in [*Shaping Africa's Post-Covid Recovery*](https://voxeu.org/content/shaping-africa-s-post-covid-recovery), edited by Rabah Arezki, Simeon Djankov, and Ugo Panizza. The work relies on the World Bank LSMS and World Bank COVID phone surveys. For more information and to access these phone surveys, visit the World Bank Microdata Library. The relevant surveys are available under under the High-Frequency Phone Survey collection: http://bit.ly/microdata-hfps. We make no guarantee that variables no used in the analysis are cleaned or accurate.
 
-[![DOI](https://doi.org/10.5281/zenodo.4558109.svg)](https://doi.org/10.5281/zenodo.4558109)
+[![DOI](https://doi.org/10.5281/zenodo.4558109)](https://doi.org/10.5281/zenodo.4558109)
 
  ## Index
  
