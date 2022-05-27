@@ -4,6 +4,10 @@ This README describes the directory structure & Stata packages necessary to repl
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4558109.svg)](https://doi.org/10.5281/zenodo.4558109)
 
+Last updated: January 2021. 
+
+For issues or concerns with this repo, please contact Anna Josephson or Jeffrey Michler.
+
  ## Index
  
  - [Contributors](#contributors)
@@ -14,9 +18,9 @@ This README describes the directory structure & Stata packages necessary to repl
 ## Contributors
 
 * Ann Furbush
-* Anna Josephson 
+* Anna Josephson [aljosephson@arizona.edu]
 * Talip Kilic 
-* Jeffrey D. Michler
+* Jeffrey D. Michler [jdmichler@arizona.edu]
 
 ## Data 
 
